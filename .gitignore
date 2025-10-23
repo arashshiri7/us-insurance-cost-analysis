@@ -1,0 +1,12 @@
+# PostgreSQL & SQL Tools Specific Files
+# Ignore pgAdmin History and Log Files
+.pghistory
+.pgadmin_history
+pgadmin4.log
+*.pgsql_query
+
+# Ignore Temporary or IDE Files (Common)
+*~
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
