@@ -6,16 +6,7 @@ Metodology / روش کار : The project data was sourced from the Kaggle platfo
 Key Findings/یافته های کلیدی :  The deep dive analysis of the insurance data identified three core risk segments and delivered actionable insights for immediate pricing optimization:
 
 1.BMI & Profit Margin: The Obese (BMI > 30) segment is the primary cost driver, with average charges approximately 50% higher than the normal weight group. This justifies an immediate, data-driven premium increase for this high-risk segment.
-### 2. BMI Segmentation & Pricing Insight
 
-| BMI Category             | Avg. Charges (USD) | Total Individuals |
-| :---                     | :---:              | :---: |
-| Obese (Over 30)          | $15,560.93         | 705 |
-| Overweight (25-30)       | $10,410.47         | 386 |
-| Normal Weight (18.5-25)  | $8,527.27          | 221 |
-| Underweight (Under 18.5) | $8,143.08          | 26 |
-
-link:[View SQL Query Folder](./SQL_Queries)
 
 
 2.Hidden Family Risk: We found a significant correlation where the cost per child is drastically higher in smoker households. This demands targeted risk penalties on family coverage to accurately reflect and cover this aggregated health risk.
@@ -25,9 +16,19 @@ link:[View SQL Query Folder](./SQL_Queries)
 Analysis Focus :
 1. Primary Risk Driver (Smoker)Smoker Status is a Cost Multiplier: Average charges for smokers are 4x to 5x higher than non-smokers. This gap is the most critical pricing inefficiency and requires immediate, data-justified premium adjustments.
 2. BMI SegmentationFocus on Obese Segment: Customers classified as Obese (BMI > 30) are the dominant high-cost segment, generating average charges 50% higher than the Normal Weight group. Pricing must strictly reflect this increased cost.
+  ### 2. BMI Segmentation & Pricing Insight
+
+| BMI Category             | Avg. Charges (USD) | Total Individuals |
+| :---                     | :---:              | :---: |
+| Obese (Over 30)          | $15,560.93         | 705 |
+| Overweight (25-30)       | $10,997.80         | 386 |
+| Normal Weight (18.5-25)  | $10,410.47         | 227 |
+| Underweight (Under 18.5) | $8,852.20          | 20|
+
+link:[View SQL Query Folder](./SQL_Queries)
 3. Hidden Family RiskAggregated Family Risk: Cost per child is significantly higher in smoker households. This validates the need to price risk not just by individual, but by accumulated household risk to prevent profit leakage.
-4. Geographical AnalysisResource Optimization: The highest average cost per customer is located in the [Southeast] area. Marketing efforts should pivot to lower-risk regions, while intensive health programs should target this high-cost region.
-5. Gender & StrategyLow-Risk Acquisition Target: While smoker status is the ultimate determinant of cost, among non-smokers, non-smoking females represent the lowest overall risk baseline and should be prioritized for profit-margin stabilization.
+5. Geographical AnalysisResource Optimization: The highest average cost per customer is located in the [Southeast] area. Marketing efforts should pivot to lower-risk regions, while intensive health programs should target this high-cost region.
+6. Gender & StrategyLow-Risk Acquisition Target: While smoker status is the ultimate determinant of cost, among non-smokers, non-smoking females represent the lowest overall risk baseline and should be prioritized for profit-margin stabilization.
 محور تحلیل:
 1.ریسک کلیدی (سیگار)	: سیگار یک عامل ریسک نیست، بلکه یک ضریب ریسک است: میانگین هزینه‌های افراد سیگاری ۴ تا ۵ برابر بیشتر از غیرسیگاری‌هاست. این شکاف باید مستقیماً در نرخ‌های حق بیمه‌ی پایه اعمال شود.
 2. تقسیم بندی BMI     :	تمرکز منابع روی چاقی: مشتریان با BMI بالای ۳۰ (Obese) بزرگترین کانون ریسک هستند و به طور متوسط ۵۰٪ هزینه‌های بالاتری ایجاد می‌کنند. قیمت‌گذاری ما باید این افزایش هزینه را به طور کامل پوشش دهد.
