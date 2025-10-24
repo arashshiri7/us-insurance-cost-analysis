@@ -21,6 +21,7 @@ link:[View SQL Query Folder](./SQL_Queries)
 2.Hidden Family Risk: We found a significant correlation where the cost per child is drastically higher in smoker households. This demands targeted risk penalties on family coverage to accurately reflect and cover this aggregated health risk.
 
 3.Strategic Customer Acquisition: Smoker Status is 4–5 times more critical than gender. To enhance profit stability and acquire the lowest-risk base, our acquisition strategy should strategically prioritize Non-Smoking Females.
+
 Analysis Focus :
 1. Primary Risk Driver (Smoker)Smoker Status is a Cost Multiplier: Average charges for smokers are 4x to 5x higher than non-smokers. This gap is the most critical pricing inefficiency and requires immediate, data-justified premium adjustments.
 2. BMI SegmentationFocus on Obese Segment: Customers classified as Obese (BMI > 30) are the dominant high-cost segment, generating average charges 50% higher than the Normal Weight group. Pricing must strictly reflect this increased cost.
