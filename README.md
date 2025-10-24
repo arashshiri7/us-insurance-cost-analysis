@@ -15,9 +15,7 @@ Key Findings/یافته های کلیدی :  The deep dive analysis of the insur
 
 Analysis Focus :
 1. Primary Risk Driver (Smoker)Smoker Status is a Cost Multiplier: Average charges for smokers are 4x to 5x higher than non-smokers. This gap is the most critical pricing inefficiency and requires immediate, data-justified premium adjustments.
-Status,Avg. Charges (USD),SQL File Link
-Smoker (Yes),"$32,050.23",[View Query](./SQL_Queries/02_Smoker_Impact.sql)
-Non-Smoker (No),"$8,434.27",
+
 2. BMI SegmentationFocus on Obese Segment: Customers classified as Obese (BMI > 30) are the dominant high-cost segment, generating average charges 50% higher than the Normal Weight group. Pricing must strictly reflect this increased cost.
   ### 2. BMI Segmentation & Pricing Insight
 
@@ -29,9 +27,10 @@ Non-Smoker (No),"$8,434.27",
 | Underweight (Under 18.5) | $8,852.20          | 20|
 
 link:[View SQL Query Folder](./SQL_Queries)
+
 3. Hidden Family RiskAggregated Family Risk: Cost per child is significantly higher in smoker households. This validates the need to price risk not just by individual, but by accumulated household risk to prevent profit leakage.
-5. Geographical AnalysisResource Optimization: The highest average cost per customer is located in the [Southeast] area. Marketing efforts should pivot to lower-risk regions, while intensive health programs should target this high-cost region.
-6. Gender & StrategyLow-Risk Acquisition Target: While smoker status is the ultimate determinant of cost, among non-smokers, non-smoking females represent the lowest overall risk baseline and should be prioritized for profit-margin stabilization.
+4. Geographical AnalysisResource Optimization: The highest average cost per customer is located in the [Southeast] area. Marketing efforts should pivot to lower-risk regions, while intensive health programs should target this high-cost region.
+5. Gender & StrategyLow-Risk Acquisition Target: While smoker status is the ultimate determinant of cost, among non-smokers, non-smoking females represent the lowest overall risk baseline and should be prioritized for profit-margin stabilization.
 محور تحلیل:
 1.ریسک کلیدی (سیگار)	: سیگار یک عامل ریسک نیست، بلکه یک ضریب ریسک است: میانگین هزینه‌های افراد سیگاری ۴ تا ۵ برابر بیشتر از غیرسیگاری‌هاست. این شکاف باید مستقیماً در نرخ‌های حق بیمه‌ی پایه اعمال شود.
 2. تقسیم بندی BMI     :	تمرکز منابع روی چاقی: مشتریان با BMI بالای ۳۰ (Obese) بزرگترین کانون ریسک هستند و به طور متوسط ۵۰٪ هزینه‌های بالاتری ایجاد می‌کنند. قیمت‌گذاری ما باید این افزایش هزینه را به طور کامل پوشش دهد.
