@@ -1,10 +1,8 @@
 # us-insurance-cost-analysis
 "Analysis of US health insurance costs using PostegreSQL"
 Strategic Insurance Risk & Pricing Analysis using PostgreSQL / Postgre SQL تحلیل استراتژیک ریسک و قیمت‌گذاری بیمه با
-Project Structure/ساختار پروژه:The entire analysis workflow is transparent and organized; all PostgreSQL scripts reside in the SQL_Queries/ directory, and the raw Kaggle data is stored in the Data/ directory
-تمامی مراحل تحلیل با شفافیت کامل ارائه شده است؛ کدهای PostgreSQL در پوشه SQL_Queries/ و داده‌های خام Kaggle در پوشه Data/ در دسترس هستند.
+Project Structure/ساختار پروژه:The entire analysis workflow is transparent and organized; all PostgreSQL scripts reside in the SQL_Queries/ directory, and the raw Kaggle data is stored in the Data/ directory.
 Metodology / روش کار : The project data was sourced from the Kaggle platform (Insurance Dataset). After standardizing the data encoding to UTF8, it was loaded into a PostgreSQL database. All structured business analyses, including risk segmentation and pricing metrics calculation, were performed using optimized SQL queries.
- داده‌های مورد نیاز پروژه از پلتفرم Kaggle (مجموعه داده Insurance) تهیه و پس از استانداردسازی کدگذاری (UTF8)،در دیتابیس PostgreSQL بارگذاری شدند. تمام تحلیل‌های ساختاریافته‌ی کسب‌وکار، از جمله بخش‌بندی ریسک(Segmentation) و محاسبه‌ی شاخص‌های قیمت‌گذاری (Pricing Metrics)، با استفاده از کوئری‌های بهینه‌سازی‌شده‌ی SQL انجام گرفت.
 Key Findings/یافته های کلیدی :  The deep dive analysis of the insurance data identified three core risk segments and delivered actionable insights for immediate pricing optimization:
 
 1.BMI & Profit Margin: The Obese (BMI > 30) segment is the primary cost driver, with average charges approximately 50% higher than the normal weight group. This justifies an immediate, data-driven premium increase for this high-risk segment.
