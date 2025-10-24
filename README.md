@@ -15,6 +15,9 @@ Key Findings/یافته های کلیدی :  The deep dive analysis of the insur
 
 Analysis Focus :
 1. Primary Risk Driver (Smoker)Smoker Status is a Cost Multiplier: Average charges for smokers are 4x to 5x higher than non-smokers. This gap is the most critical pricing inefficiency and requires immediate, data-justified premium adjustments.
+Status,Avg. Charges (USD),SQL File Link
+Smoker (Yes),"$32,050.23",[View Query](./SQL_Queries/02_Smoker_Impact.sql)
+Non-Smoker (No),"$8,434.27",
 2. BMI SegmentationFocus on Obese Segment: Customers classified as Obese (BMI > 30) are the dominant high-cost segment, generating average charges 50% higher than the Normal Weight group. Pricing must strictly reflect this increased cost.
   ### 2. BMI Segmentation & Pricing Insight
 
