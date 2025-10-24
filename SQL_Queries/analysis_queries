@@ -1,0 +1,84 @@
+CREATE TABLE insurance_data (
+    age INT,
+    sex VARCHAR(10),
+    bmi NUMERIC(5, 2),
+    children INT,
+    smoker VARCHAR(10),
+    region VARCHAR(20),
+    charges NUMERIC(10, 2)
+);
+-------------------------------------------------------------
+SELECT
+    smoker,
+    -- Calculates the average charge for each group
+    ROUND(AVG(charges), 2) AS average_charges_usd
+FROM
+    insurance_data
+GROUP BY
+    smoker;
+	----------------------------------------------------------
+SELECT
+    -- Classifies BMI into standard risk categories
+    CASE
+        WHEN bmi < 18.5 THEN 'A. Underweight (Under 18.5)'
+        WHEN bmi BETWEEN 18.5 AND 25.0 THEN 'B. Normal Weight (18.5-25)'
+        WHEN bmi BETWEEN 25.0 AND 30.0 THEN 'C. Overweight (25-30)'
+        WHEN bmi > 30.0 THEN 'D. Obese (Over 30)'
+        ELSE 'E. Unknown'
+    END AS "bmi_category",
+
+    -- Calculates the average charge for the category
+    ROUND(AVG(charges), 2) AS "average_charges_usd",
+
+    -- Counts the number of individuals in each category
+    COUNT(*) AS "total_individuals"
+FROM
+    insurance_data
+GROUP BY
+    "bmi_category"
+ORDER BY
+    "average_charges_usd" DESC;
+	----------------------------------------------------------------------------------------------------
+SELECT
+    smoker,
+    -- Calculates the average charge PER CHILD (charges / children) within each smoker category
+    ROUND(AVG(charges * 1.0 / children), 2) AS "avg_cost_per_child_usd",
+    -- Total number of individuals in each category (for volume insight)
+    COUNT(*) AS "total_individuals"
+FROM
+    insurance_data
+WHERE
+    children > 0 -- Excludes childless individuals to prevent division by zero
+GROUP BY
+    smoker
+ORDER BY
+    "avg_cost_per_child_usd" DESC;
+	------------------------------------------------------------
+SELECT
+    region,
+    -- Calculates the average charge per customer in each region
+    ROUND(AVG(charges), 2) AS "average_charges_usd",
+    -- Counts the number of customers in each region
+    COUNT(*) AS "total_customers"
+FROM
+    insurance_data
+GROUP BY
+    region
+ORDER BY
+    "average_charges_usd" DESC; -- Sorts to place the most expensive region first
+	--------------------------------------------------------------------
+SELECT
+    sex,
+    smoker,
+    -- Calculates the average charge for the combined group
+    ROUND(AVG(charges), 2) AS "average_charges_usd",
+    -- Counts the number of individuals in each group
+    COUNT(*) AS "total_individuals",
+    -- Calculates the percentage of total individuals this group represents (using a Window Function)
+    ROUND((COUNT(*) * 100.0) / SUM(COUNT(*)) OVER (), 2) AS "percentage_of_total_pct"
+FROM
+    insurance_data
+GROUP BY
+    sex, smoker
+ORDER BY
+    "average_charges_usd" DESC;
