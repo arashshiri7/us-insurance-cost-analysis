@@ -16,7 +16,7 @@ Key Findings/یافته های کلیدی :  The deep dive analysis of the insur
 | Overweight (25-30)       | $10,410.47         | 386 |
 | Normal Weight (18.5-25)  | $8,527.27          | 221 |
 | Underweight (Under 18.5) | $8,143.08          | 26 |
-link:
+link:SQL_Queries/analysis_queries
 
 
 2.Hidden Family Risk: We found a significant correlation where the cost per child is drastically higher in smoker households. This demands targeted risk penalties on family coverage to accurately reflect and cover this aggregated health risk.
